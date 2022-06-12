@@ -9,8 +9,9 @@ import javax.persistence.Table;
 @Table(name = "TEMPERATURE")
 public class Temperature {
 
-    private @Id
-    @GeneratedValue Long id;
+    @Id
+    @GeneratedValue
+    private Long id;
 
     private double measurement;
     private long timestamp;
