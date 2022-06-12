@@ -1,4 +1,4 @@
-package com.example.tempmonitor;
+package com.example.tempmonitor.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
