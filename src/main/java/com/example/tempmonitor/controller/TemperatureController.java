@@ -16,15 +16,15 @@ public class TemperatureController {
         this.temperatureService = temperatureService;
     }
 
-    @RequestMapping(value = "/save", method = RequestMethod.POST)
+    @RequestMapping(value = "/temperatures", method = RequestMethod.POST)
     @ResponseBody
-    public List<Temperature> saveTemperatureBulk(@RequestBody List<Temperature> temperatureList) {
-        return temperatureService.saveAllTemperatureEntities(temperatureList);
+    public List<Temperature> saveTemperatures(@RequestBody List<Temperature> temperatureList) {
+        return temperatureService.saveTemperatures(temperatureList);
     }
 
     @RequestMapping(value = "/temperatures", method = RequestMethod.GET)
     @ResponseBody
-    public List<Temperature> getAllTemperatures() {
+    public List<Temperature> getTemperatures() {
         return temperatureService.getAllTemperatures();
     }
 }

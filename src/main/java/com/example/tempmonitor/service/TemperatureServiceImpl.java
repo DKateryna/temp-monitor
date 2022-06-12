@@ -18,10 +18,8 @@ public class TemperatureServiceImpl implements TemperatureService {
 
     @Override
     @Transactional
-    public List<Temperature> saveAllTemperatureEntities(List<Temperature> temperatures) {
-        List<Temperature> response;
-        response = temperatureRepository.saveAll(temperatures);
-        return response;
+    public List<Temperature> saveTemperatures(List<Temperature> temperatures) {
+        return temperatureRepository.saveAll(temperatures);
     }
 
     @Override
