@@ -14,7 +14,7 @@ public class Temperature {
     private Long id;
 
     private double measurement;
-    private long timestamp;
+    private Long timestamp;
     private Long sensorId;
 
     public Temperature() {
