@@ -38,20 +38,3 @@ Retrieve the members data in `json` format.
 __Example:__
 
 `[{"id":1,"measurement":36.5,"timestamp":1655048488,"sensorId":2},{"id":2,"measurement":36.2,"timestamp":1655048588,"sensorId":2},{"id":3,"measurement":36.4,"timestamp":1655048688,"sensorId":2},{"id":4,"measurement":36.1,"timestamp":1655048788,"sensorId":2},{"id":5,"measurement":36.6,"timestamp":1655048888,"sensorId":2},{"id":6,"measurement":36.9,"timestamp":1655048988,"sensorId":2},{"id":7,"measurement":36.3,"timestamp":1655058488,"sensorId":2},{"id":8,"measurement":36.2,"timestamp":1655068488,"sensorId":2},{"id":9,"measurement":36.4,"timestamp":1655078488,"sensorId":2},{"id":10,"measurement":36.5,"timestamp":1655088488,"sensorId":2},{"id":11,"measurement":36.6,"timestamp":1655098488,"sensorId":2},{"id":12,"measurement":39.0,"timestamp":1655048416,"sensorId":3}]k`
-
-***
-
-/* 
-
-(TODO)
-- implement service to retrieve the aggregated temperature data (hourly, daily):
-- store results into hourly and daily temperature objects
-- - add cron job to retrieve 
-- refactore `TemperatureService#getAllTemperatures` to return `min, max, average` temperatures per hour, day
-- Documenting an API using _swagger_
-- cleanup readmy
-- add unit tests
-- add validation and constraints to domain classes
-- handle exeptions/errors
-
-*/
