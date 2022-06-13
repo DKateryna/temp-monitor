@@ -5,13 +5,7 @@ This API is to retrieve and save a temperature data requested in `json` format.
 ### Getting Started
 To run the application, run the following command in a terminal window (in the complete) directory:
 
-`./gradlew bootRun`
-
-If you use Maven, run the following command in a terminal window (in the complete) directory:
-
 `./mvnw spring-boot:run`
-
-Change the Name to "your_name" and then choose "Generate Project". A .zip will download. Unzip it. Inside you’ll find a simple, Maven-based project including a [pom.xml](pom.xml) build file. 
 
 ### POST /temperatures
 
