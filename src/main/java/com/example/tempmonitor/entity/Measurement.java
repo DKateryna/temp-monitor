@@ -13,15 +13,15 @@ public class Measurement {
     @GeneratedValue
     private Long id;
 
-    private double value;
+    private double sensorValue;
     private long timestamp;
     private long sensorId;
 
     public Measurement() {
     }
 
-    public Measurement(double value, long timestamp, long sensorId) {
-        this.value = value;
+    public Measurement(double sensorValue, long timestamp, long sensorId) {
+        this.sensorValue = sensorValue;
         this.timestamp = timestamp;
         this.sensorId = sensorId;
     }
@@ -34,12 +34,12 @@ public class Measurement {
         this.id = id;
     }
 
-    public double getValue() {
-        return value;
+    public double getSensorValue() {
+        return sensorValue;
     }
 
-    public void setValue(double value) {
-        this.value = value;
+    public void setSensorValue(double valueOfTemperature) {
+        this.sensorValue = valueOfTemperature;
     }
 
     public long getTimestamp() {
