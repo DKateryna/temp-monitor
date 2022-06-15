@@ -6,22 +6,22 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "TEMPERATURE")
-public class Temperature {
+@Table(name = "MEASUREMENT")
+public class Measurement {
 
     @Id
     @GeneratedValue
     private Long id;
 
-    private double measurement;
-    private Long timestamp;
-    private Long sensorId;
+    private double value;
+    private long timestamp;
+    private long sensorId;
 
-    public Temperature() {
+    public Measurement() {
     }
 
-    public Temperature(double measurement, long timestamp, Long sensorId) {
-        this.measurement = measurement;
+    public Measurement(double value, long timestamp, long sensorId) {
+        this.value = value;
         this.timestamp = timestamp;
         this.sensorId = sensorId;
     }
@@ -34,12 +34,12 @@ public class Temperature {
         this.id = id;
     }
 
-    public double getMeasurement() {
-        return measurement;
+    public double getValue() {
+        return value;
     }
 
-    public void setMeasurement(double measurement) {
-        this.measurement = measurement;
+    public void setValue(double value) {
+        this.value = value;
     }
 
     public long getTimestamp() {
@@ -50,12 +50,11 @@ public class Temperature {
         this.timestamp = timestamp;
     }
 
-    public Long getSensorId() {
+    public long getSensorId() {
         return sensorId;
     }
 
-    public void setSensorId(Long sensorId) {
+    public void setSensorId(long sensorId) {
         this.sensorId = sensorId;
     }
 }
-

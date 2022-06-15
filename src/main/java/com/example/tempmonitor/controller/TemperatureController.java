@@ -1,7 +1,7 @@
 package com.example.tempmonitor.controller;
 
-import com.example.tempmonitor.entity.Temperature;
-import com.example.tempmonitor.service.TemperatureService;
+import com.example.tempmonitor.entity.Measurement;
+import com.example.tempmonitor.service.MeasurementService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,21 +14,21 @@ import java.util.List;
 @RestController
 public class TemperatureController {
     @Autowired
-    private final TemperatureService temperatureService;
+    private final MeasurementService measurementService;
 
-    public TemperatureController(TemperatureService temperatureService) {
-        this.temperatureService = temperatureService;
+    public TemperatureController(MeasurementService measurementService) {
+        this.measurementService = measurementService;
     }
 
     @RequestMapping(value = "/temperatures", method = RequestMethod.POST)
     @ResponseBody
-    public List<Temperature> saveTemperatures(@RequestBody List<Temperature> temperatureList) {
-        return temperatureService.saveTemperatures(temperatureList);
+    public List<Measurement> saveMeasurement(@RequestBody List<Measurement> temperatureList) {
+        return measurementService.saveTemperatures(temperatureList);
     }
 
     @RequestMapping(value = "/temperatures", method = RequestMethod.GET)
     @ResponseBody
-    public List<Temperature> getTemperatures() {
-        return temperatureService.getAllTemperatures();
+    public List<Measurement> getAggregatedData() {
+        return measurementService.getAggregatedData();
     }
 }
