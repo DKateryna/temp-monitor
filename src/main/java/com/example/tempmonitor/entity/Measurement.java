@@ -11,7 +11,7 @@ public class Measurement {
 
     @Id
     @GeneratedValue
-    private Long id;
+    private long id;
 
     private double sensorValue;
     private long timestamp;
@@ -26,11 +26,11 @@ public class Measurement {
         this.sensorId = sensorId;
     }
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
